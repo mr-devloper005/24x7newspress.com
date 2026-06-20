@@ -35,7 +35,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       >
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
           <AuthProvider>
-            {children}
+            <div className="flex min-h-screen flex-col">
+              {children}
+            </div>
             <Toaster />
           </AuthProvider>
         </ThemeProvider>
