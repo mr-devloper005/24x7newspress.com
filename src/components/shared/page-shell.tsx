@@ -14,9 +14,9 @@ export function PageShell({
   children?: ReactNode
 }) {
   return (
-    <div className="min-h-screen text-[#1a0f24]">
+    <div className="flex min-h-screen flex-col text-[#1a0f24]">
       <NavbarShell />
-      <main>
+      <main className="flex flex-1 flex-col">
         <section className="border-b border-[#36064d]/10 bg-gradient-to-b from-white to-[#f6f1fa]">
           <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 lg:px-8">
             <div className="flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
@@ -30,7 +30,7 @@ export function PageShell({
             </div>
           </div>
         </section>
-        <section className="mx-auto max-w-6xl px-4 py-10 sm:px-6 lg:px-8">
+        <section className="mx-auto w-full max-w-6xl flex-1 px-4 py-10 sm:px-6 lg:px-8">
           {children}
         </section>
       </main>
